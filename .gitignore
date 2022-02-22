@@ -21,6 +21,7 @@
 .pytest_cache/
 .ropeproject
 .scrapy
+.sublime-project.sublime-workspace
 .tox/
 .venv
 .webassets-cac

@@ -1,18 +1,20 @@
 [tool.poetry]
-name = "generic-template"
+name = "rss_downloader"
 version = "0.0.0"
-description = "Generic Python project template."
-authors = ["Kyle Finley <kyle@finley.sh>"]
+description = "RSS Downloader."
+authors = ["Craig Davis <kg5ohk@gmail.com>"]
 license = "Apache-2.0"
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.9"
 
 pygments = { version = "^2.10.0", optional = true }  # docs
 recommonmark = { version = "^0.7.1", optional = true }  # docs
 sphinx = { version = "^4.3.1", optional = true }  # docs
 sphinx-rtd-theme = { version = "^1.0.0", optional = true }  # docs
 sphinxcontrib-apidoc = { version = "^0.3", optional = true }  # docs
+feedparser = "^6.0.8"
+requests = "^2.27.1"
 
 [tool.poetry.dev-dependencies]
 black = "21.9b0"
@@ -32,6 +34,9 @@ pylint = "^2.12.1"
 pytest = "^6.2.5"
 pytest-cov = "^3.0.0"
 pytest-mock = "^3.5.1"
+
+[tool.poetry.scripts]
+rss-downloader = "rss_downloader:main"
 
 [tool.poetry.extras]
 docs = [
@@ -181,7 +186,7 @@ exclude = [
   "**/node_modules",
   "**/typings",
 ]
-pythonVersion = "3.8"
+pythonVersion = "3.9"
 reportDuplicateImport = "none"
 reportImportCycles = "none"
 reportIncompatibleMethodOverride = "warning"
