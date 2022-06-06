@@ -35,7 +35,7 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - run: poetry install -vv
-      - uses: pre-commit/action@v2.0.3
+      - uses: pre-commit/action@v3.0.0
   test-python:
     name: Python Tests
     runs-on: ubuntu-latest
